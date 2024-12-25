@@ -6,11 +6,11 @@ function App() {
   const [api, contextHolder] = notification.useNotification();
 
   const openNotification = useCallback(() => {
-    api.open({
-      message: "Notification Title",
-      description:
-        "I will never close automatically. This is a purposely very very long description that has many many characters and words.",
-      duration: 0,
+    api.error({
+      message: "Cảnh báo",
+      description: "Bạn đã bị hack",
+      duration: 30,
+      placement: "top",
     });
   }, [api]);
 
